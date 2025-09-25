@@ -1,2 +1,7 @@
-# one-last-kiss
-nb
+#include<stdio.h>
+int main()
+{
+printf("hello world!!!");
+return 0
+}
+
