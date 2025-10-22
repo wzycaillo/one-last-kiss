@@ -14,10 +14,10 @@ int main()
 		printf(" %.3lf %.3lf", b, c);
 		getchar();
 		char m,n;
-		printf("ÇëÊäÈëÒ»¸ö×Ö·û£º\n");
+		printf("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ï¼š\n");
 		scanf_s("%c", &m);
 		n = (int)m;
-		printf("\n\n%cµÄASCIIÎª%d\n", m, n);
+		printf("\n\n%cçš„ASCIIä¸º%d\n", m, n);
 		getchar();
 		int x, y, z;
 		scanf_s("%d %d", &x, &y);
@@ -32,4 +32,5 @@ int main()
 
 
 	return 0;
+
 }
