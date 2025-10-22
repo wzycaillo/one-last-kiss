@@ -2,7 +2,7 @@
 int main() 
 {
 	int a, b, c,t;
-	printf("ÇëÊäÈëÈı¸öÕûÊı");
+	printf("è¯·è¾“å…¥");
 	scanf_s("%d%d%d", &a, &b, &c);
 
 	if (a > b)
@@ -25,4 +25,5 @@ int main()
 	}
 	printf("%d %d %d", a, b, c);
 	return 0;
+
 }
