@@ -1,0 +1,156 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+
+{
+	int a, b, c;
+	a = 10; b = 60; c = 30;
+	if (a > b) a = b;
+	b = c; c = a;
+	printf("a=%d,b=%d,c=%d\n", a, b, c);
+	int g;
+	int w;
+	printf("你的性别是:(男输入1，女输入0)\n");
+	scanf_s("%d", &g);
+	printf("体重是：");
+	scanf_s("%d",&w);
+	if (g == 1 && w > 120)
+	{
+		printf("200");
+	}
+	if (g == 1 && w < 120)
+	{
+		printf("180");
+	}
+	if (g == 0 && w > 100)
+	{
+		printf("150");
+	}
+	if (g == 0 && w < 100)
+	{
+		printf("120");
+	}
+	int m,n,q,s;
+	printf("输入一个三位正整数(中间用空格隔开)：");
+		scanf_s("%d %d %d", &m,&n,&q);
+		s = 100 * m + 10 * n + q;
+		if (s = pow(m, 3) + pow(n, 3) + pow(q, 3))
+		{
+			printf("是水仙花数");
+		}
+		else
+		{
+			printf("no");
+		}
+		printf("成绩是\n");
+		float score;
+		scanf_s("%f", &score);
+		if (score>=90&&score<=100)
+		{
+			printf("A");
+		}
+		else if (score >= 80 && score <90)
+		{
+			printf("B");
+		}
+		 else if (score >= 70 && score < 80)
+		{
+			printf("C");
+		}
+		else if (score >= 60 && score < 70)
+		{
+			printf("D");
+		}
+		else if (score >= 0 && score < 60)
+		{
+			printf("E");
+		}
+		else
+		{
+			printf("SB");
+		}
+		printf("薪水是");
+		int qian = 500;
+		double p;
+		scanf_s("%lf",& p);
+		if(p<=1000)
+		{
+			printf("%lf", p + qian);
+		}
+		if (p > 1000&&p<=2000)
+		{
+			printf("%lf", p*1.1 + qian);
+		}
+		if (p > 2000 && p <= 5000)
+		{
+			printf("%lf", p * 1.15 + qian);
+		}
+		if (p > 5000 && p <= 10000)
+		{
+			printf("%lf", p * 1.2 + qian);
+		}
+		if (p >10000)
+		{
+			printf("%lf", p * 1.25 + qian);
+		}
+		printf("快输入一个数");
+		int digit1,digit2,digit3,digit4,digit5,o,answer;
+		scanf_s("%d",&o);
+		if (o >= 0 && o < 10)
+		{
+			answer = 1;
+		}
+		if (o >= 10 && o < 100)
+		{
+			answer = 2;
+		}
+		else if (o >= 100 && o< 1000)
+		{
+			answer = 3;
+		}
+		else if (o >=1000  &&o < 10000)
+		{
+			answer = 4;
+		}
+		else if (o >= 10000 && o < 100000)
+		{
+			answer = 5;
+		}
+		else {
+			printf("无效");
+		}
+		digit1 = o% 10;//个位
+		digit2 = o / 10 % 10;//十位
+		digit3 = o / 100 % 10;
+		digit4 = o / 1000 % 10;
+		digit5 = o / 10000 % 10;
+		switch (answer) {
+		case 1:
+			printf("位数：1\n");
+			printf("各位数字：%d\n", digit1);
+			printf("逆序：%d\n", digit1);
+			break;
+		case 2:
+			printf("位数：2\n");
+			printf("各位数字：%d %d\n", digit1, digit2);
+			printf("逆序：%d %d\n", digit2, digit1);
+			break;
+		case 3:
+			printf("位数：3\n");
+			printf("各位数字：%d %d %d\n", digit1, digit2, digit3);
+			printf("逆序：%d %d %d\n", digit3, digit2, digit1);
+			break;
+		case 4:
+			printf("位数：4\n");
+			printf("各位数字：%d %d %d %d\n", digit1, digit2, digit3, digit4);
+			printf("逆序：%d %d %d %d\n", digit4, digit3, digit2, digit1);
+			break;
+		case 5:
+			printf("位数：5\n");
+			printf("各位数字：%d %d %d %d %d\n", digit1, digit2, digit3, digit4, digit5);
+			printf("逆序：%d %d %d %d %d\n", digit5, digit4, digit3, digit2, digit1);
+			break;
+		}
+
+	return 0;
+}
