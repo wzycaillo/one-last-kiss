@@ -1,0 +1,97 @@
+#include<stdio.h>
+#include<math.h>
+int gcd(int q, int q_1) {
+	while (q_1 != 0) {
+		int temp = q % q_1;
+		q = q_1;
+		q_1 = temp;
+	}
+	
+	return q;
+}
+int lcm(int a,int b){
+	int gcd_val = gcd(a, b);
+	return (a * b) / gcd_val;
+}
+int su(int w) {
+        	for (int i = 2; i < w; ++i) {
+		if (w % i == 0) {
+			return 2;
+		}
+	}//判断质数
+	return 1;
+}
+
+int main()
+{
+	int k = 100;
+	while (k != 0) {
+		printf("%d,", k);
+		k--;
+		if (k % 10 == 0)printf("\n");
+	}
+	long long ii, n, ss = 1;
+	printf("Please enter n");
+	scanf_s("%lld", &n);
+	for (ii = 1; ii <= n; ii++)
+		ss = ss * ii;
+	printf("%lld!=%lld\n", n, ss);
+	int  i = 100;
+	while (1) {
+		i = i % 100 + 1;
+		printf("%4d,", i);
+		if (i % 10 == 0)printf("\n");
+		if (i >= 100)break;
+	}
+	int a = 2, b = 8;
+	while (b-- < 0)
+		b -= a;
+	a++;
+	printf("a=%d,b=%d\n", a, b);
+		int x = 2, y = 6, z = 3;
+		do(y = y - 1);
+		while (z-- > 0 && ++x < 5);
+		printf("x=%d\ty=%d\tz=%d\n", x, y, z);
+		int s = 0, t, is, j;
+		for (is = 1; is <= 3; is++)
+		{
+			t = 1;
+			for (j = 1; j <= 2 * is - 1; j++)
+				t = t * j;
+			s = s + t;
+		}
+		printf("%-5d\n", s);
+		int ch, da;
+		int sm = 1;
+		for (ch = 1; ch <= 10; ch++)
+		{
+			da = sm * 2 + 1;
+			sm=da;
+		}
+		double poor = 0.005;
+		int rich,day;
+		for (day = 1; day <= 30; day++) {
+			rich = 100000 * day;
+			poor = poor* 2;
+				poor = poor;
+		}
+		printf("请输入一个偶数");
+		int gebg;
+		scanf_s("%d", &gebg) ;
+		for (int m=2;m<=gebg/2;m++)
+		{
+			if (su(m) == 1 && su(gebg - m) == 1) {
+				printf("%d %d\n", m, gebg - m);
+			}
+		}//拆分偶数
+		printf("rich=%d\n", rich);
+		printf("poor=%lf\n", poor);
+		printf("%d", da);
+		printf("请输入两个正整数");
+		int a_1, a_2, m;
+		scanf_s("%d %d", &a_1, &a_2);
+		int gcd_r = gcd(a_1, a_2);
+		int lcm_r = lcm(a_1, a_2);
+		printf("%d %d", gcd_r, lcm_r);
+	return 0;
+}
