@@ -1,0 +1,165 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+int main()
+{
+	int arr[3][3] = { {4,9,2},{3,5,7},{8,1,6} };
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			printf("%d\t", arr[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	/*int a[5];
+	int i, j, t;
+	printf("input 5 numbers\n");
+	for (i = 0; i < 5; i++)
+		scanf_s("%d", &a[i]);
+	printf("\n");
+	for (j = 0; j < 4; j++)
+		for (i = 0; i < 9 - j; i++)
+	if(a[i]<a[i+1])
+	{
+		t = a[i]; a[i] = a[i + 1]; a[i + 1] = t;
+	}
+	printf("hh\n");
+	for (i = 0; i < 5; i++)
+		printf("%d", a[i]);
+	printf("\n");*/
+	/*int arr[5];
+	printf("请输入五个整数：\n");
+	for (i = 0; i < 5; i++) {
+		scanf_s("%d", &arr[i]);
+	}
+	int max = arr[0];
+	int min = arr[0];
+	for (i = 1; i < 5; i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+		if (arr[i] < min) {
+			min = arr[i];
+		}
+	}
+		printf("最大值%d", max);
+		printf("最小值%d", min);
+	*/
+	/*int arr[5][5] = { 0 };
+	for (int i = 0; i < 5; i++) {
+		arr[i][0] = 1;
+		arr[i][i] = 1;
+	}
+	for (int i = 2; i < 5; i++) {
+		for (int j = 1; j < i; j++) {
+			arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
+		}
+	}
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j <= i; j++) {
+			printf("%d", arr[i][j]);
+		}
+		printf("\n");
+	}*/
+	double no,l_long,sum;
+	double mo = 100.0;
+	for (int i = 1; i <= 10; i++) {
+		no =   mo/pow(2,i);
+		if (i == 1) {
+			sum = 100.0;
+		}
+		else {
+			l_long = mo + 2.0 * no;
+			sum = 2*no + sum;
+		}
+	}
+	printf(" %lf %lf\n",no,sum);
+	char ch;
+	int letters = 0, spaces = 0, digits = 0, others = 0;
+
+	printf("请输入一行字符：\n");
+	// 循环读取字符，直到遇到换行符
+	while ((ch = getchar()) != '\n') {
+		if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+			letters++; // 英文字母
+		}
+		else if (ch == ' ') {
+			spaces++; // 空格
+		}
+		else if (ch >= '0' && ch <= '9') {
+			digits++; // 数字
+		}
+		else {
+			others++; // 其他字符
+		}
+	}
+	printf("英文字母个数：%d\n", letters);
+	printf("空格个数：%d\n", spaces);
+	printf("数字个数：%d\n", digits);
+	printf("其他字符个数：%d\n", others);
+
+	int arrr[5][5] = { 0 };
+	printf("请输入5*5个数\n");
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			scanf_s("%d", &arrr[i][j]);
+		}
+	}int m = 0;
+	for (int i = 0; i < 5; i++) {
+		for (int j = i; j <= i; j++) {
+			m = m+ arr[i][j];
+		}
+	}
+	int n = 0;
+	for (int i = 0; i < 5; i++) {
+		n=n+arrr[i][4 - i];
+	}
+	printf("%d\n", m);
+	printf("%d\n", n);
+	char a[100]; // 定义足够大的字符数组存储输入
+	printf("请输入字符串：");
+	gets_s(a); // 输入字符串（也可用scanf，但scanf会忽略空格）
+
+	int len = strlen(a);
+	int left = 0, right = len - 1;
+	char temp;
+
+	while (left < right) {
+		temp = a[left];
+		a[left] = a[right];
+		a[right] = temp;
+		left++;
+		right--;
+	}
+	printf("反转后的字符串：%s\n", a);
+  int a[] = { 1,2,3,4,5 }, i, j, s = 0;
+j = 1;
+for (i = 4; i >= 0; i--)
+{
+	s = s + a[i] * j;
+	j = j * 10;
+}
+printf("s=%d\n", s);
+int k = 0, n, q, num[16] = { 0 };
+printf("输入十位数\n");
+scanf_s("%d",&n);
+printf("%d转换为二进制数\n", n);
+do
+{
+	num[k] = n % 2;
+	n = n / 2;
+	k++;
+} while (n != 0);
+for (k = 15; k >= 0; k--)
+	printf("%d\n", num[k]);
+int l=0;
+int b[4] = { 0,0,0,0 };
+for (l = 0; l < 4; l++) {
+	scanf_s("%d", &b[l]);
+}
+	int sum = 0;
+	for (int l_1 = 0; l_1 < 4; l_1++)
+		sum = sum+b[l_1];
+	printf("%d", sum);
+	return 0;
+}
